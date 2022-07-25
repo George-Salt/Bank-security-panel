@@ -42,11 +42,11 @@ def passcard_info_view(request, passcode):
 
     for visit in visits_by_passcard:
         duration = format_duration(get_duration(visit))
-        flag = is_visit_long(visit)
+        long_visit_flag = is_visit_long(visit)
         filled_template = {
             'entered_at': visit.entered_at,
             'duration': duration,
-            'is_strange': flag
+            'is_strange': long_visit_flag
         }
         this_passcard_visits.append(filled_template)
 

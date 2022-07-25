@@ -16,11 +16,11 @@ pip install -r requirements.txt
 
 Выглядеть должно примерно так:
 ```
-HOST='bank.security.host'
-PORT=12345
-NAME='bank'
-USER='security'
-PASSWORD='123abc'
+DB_HOST='bank.security.host'
+DB_PORT=12345
+DB_NAME='bank'
+DB_USER='security'
+DB_PASSWORD='123abc'
 ```
 
 ## Запуск

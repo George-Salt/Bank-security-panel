@@ -38,17 +38,17 @@ def storage_information_view(request):
         formatted_duration = format_duration(duration)
         owner_name = visit.passcard.owner_name
         entry_time = localtime(visit.entered_at)
-        flag = is_visit_long(visit)
+        long_visit_flag = is_visit_long(visit)
 
         filled_template = {
             'who_entered': owner_name,
             'entered_at': entry_time,
             'duration': formatted_duration,
-            'is_strange': flag
+            'is_strange': long_visit_flag
         }
         non_closed_visits.append(filled_template)
 
     context = {
-        'non_closed_visits': non_closed_visits,  # не закрытые посещения
+        'non_closed_visits': non_closed_visits,
     }
     return render(request, 'storage_information.html', context)
