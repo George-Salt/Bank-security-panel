@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Подготовка файла .env
 
-В папке проекта создайте файл `.env`. Заполните переменные `HOST`, `PORT`, `NAME`, `USER`, `PASSWORD`. Настройте `DEBUG-режим` под себя - True или False.
+В папке проекта создайте файл `.env`. Заполните переменные `HOST`, `PORT`, `NAME`, `USER`, `PASSWORD`. В настройке `ALLOWED_HOSTS` укажите через запятую, какие хосты смогут обслуживать этот сайт. Настройте `DEBUG-режим` под себя - True или False.
 
 Выглядеть должно примерно так:
 ```
@@ -22,6 +22,7 @@ DB_NAME='bank'
 DB_USER='security'
 DB_PASSWORD='123abc'
 DEBUG=False
+ALLOWED_HOSTS=''
 ```
 
 ## Запуск
